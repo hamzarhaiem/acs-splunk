@@ -1,0 +1,18 @@
+apiVersion: platform.stackrox.io/v1alpha1
+kind: SecuredCluster
+metadata:
+  name: local-cluster
+  namespace: stackrox
+spec:
+  clusterName: local-cluster
+  centralEndpoint: central.stackrox.svc:443
+  sensor:
+    tls:
+      # Les secrets viendront de l'init-bundle
+      # Tu ajouteras l'init-bundle une fois généré
+      {}
+  admissionControl:
+    listenOnCreates: true
+    listenOnUpdates: true
+  collector:
+    collection: EBPF

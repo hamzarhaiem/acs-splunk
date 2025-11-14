@@ -1,0 +1,13 @@
+apiVersion: platform.stackrox.io/v1alpha1
+kind: Central
+metadata:
+  name: central
+  namespace: stackrox
+spec:
+  central:
+    exposure:
+      type: NodePort
+      nodePort:
+        port: 443
+  scanner:
+    scalable: false

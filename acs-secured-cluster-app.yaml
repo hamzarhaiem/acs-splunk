@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: acs-secured-cluster
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/hamzarhaiem/acs-splunk.git
+    targetRevision: main
+    path: security/acs/secured-cluster
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: stackrox
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
