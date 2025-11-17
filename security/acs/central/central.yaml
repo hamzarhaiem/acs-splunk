@@ -6,8 +6,9 @@ metadata:
 spec:
   central:
     exposure:
-      type: NodePort
       nodePort:
         port: 443
+      type: NodePort
   scanner:
     scalable: false
+
