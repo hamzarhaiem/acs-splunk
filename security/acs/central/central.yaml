@@ -3,11 +3,6 @@ kind: Central
 metadata:
   name: central
   namespace: stackrox
-  annotations:
-    # ArgoCD: ignore les différences sur /spec/scanner (l'opérateur ajoute des champs)
-    argocd.argoproj.io/ignore-differences: |
-      jsonPointers:
-      - /spec/scanner
 spec:
   central:
     exposure:
