@@ -9,5 +9,13 @@ spec:
       type: NodePort
       nodePort:
         port: 443
+    db:
+      resources:
+        requests:
+          cpu: "500m"
+          memory: "1Gi"
+        limits:
+          cpu: "1"
+          memory: "2Gi"
   scanner:
     scalable: false
