@@ -14,7 +14,7 @@ spec:
     namespace: rhacs-operator
   syncPolicy:
     automated:
-      selfHeal: true
       prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
