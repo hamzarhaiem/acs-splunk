@@ -1,3 +1,8 @@
+apiVersion: platform.stackrox.io/v1alpha1
+kind: SecuredCluster
+metadata:
+  name: secured-cluster
+  namespace: stackrox
 spec:
   clusterName: local-cluster
   centralEndpoint: central.stackrox.svc:443
@@ -5,4 +10,3 @@ spec:
     tls: {}
   collector:
     collection: EBPF
-
