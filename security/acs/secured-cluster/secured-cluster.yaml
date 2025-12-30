@@ -6,7 +6,4 @@ metadata:
 spec:
   clusterName: local-cluster
   centralEndpoint: central.stackrox.svc:443
-  sensor:
-    tls: {}
-  collector:
-    collection: EBPF
+  sensor: {}
